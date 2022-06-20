@@ -44,8 +44,13 @@ buttonNext.addEventListener("click", function(){
     // Incremento di 1 per l'elemento attivo, seleziono quindi il prossimo
     activeElementIndex = activeElementIndex + 1;
 
+    if (activeElementIndex === imgList.length){
+        activeElementIndex = 0;
+    }
+
     // Aggiungo la classe active al nuovo elemento attivo
     imgList[activeElementIndex].classList.add("active");
+
 })
 
 // Al clic sul pulsante Previous nascondo l'immagine attuale e mostro la precedente
@@ -57,6 +62,10 @@ buttonPrev.addEventListener("click", function(){
     
     // Decremento di 1 per l'elemento attivo, seleziono quindi il precedente
     activeElementIndex = activeElementIndex - 1;
+
+    if (activeElementIndex < 0){
+        activeElementIndex = imgList.length - 1;
+    }
 
     // Aggiungo la classe active al nuovo elemento attivo
     imgList[activeElementIndex].classList.add("active");
