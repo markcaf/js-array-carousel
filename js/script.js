@@ -12,8 +12,25 @@ const images = [
 let activeElementIndex = 0;
 
 // Assegnazione di variabile per il Container del Carousel
-const imgWrapper = document.querySelector("carousel_wrapper carousel_image_container");
+const imgWrapper = document.querySelector(".carousel_wrapper .carousel_image_container");
 
 // Assegnazione di variabile per i "figli" di imgWrapper
 const imgList = imgWrapper.children;
+
+// Creazione di un ciclo FOR per il caricamento html delle immagini
+for (i=0; i<images.length; i++){
+    // Creo l'elemento html di tipo img
+    const newImg = document.createElement("img");
+
+    // Aggiungo la classe active che dovrà avere il primo elemento newImg 
+    if (i === 0){
+        newImg.classList.add("active");
+    }
+    
+    // Aggiungo l'src dell'immagine
+    newImg.setAttribute("src", images[i]);
+
+    // Aggiungo l'img creata alla lista
+    imgWrapper.append(newImg);
+}
 
