@@ -33,4 +33,3 @@ for (i=0; i<images.length; i++){
     // Aggiungo l'img creata alla lista
     imgWrapper.append(newImg);
 }
-
