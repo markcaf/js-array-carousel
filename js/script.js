@@ -33,3 +33,31 @@ for (i=0; i<images.length; i++){
     // Aggiungo l'img creata alla lista
     imgWrapper.append(newImg);
 }
+
+// Al clic sul pulsante Next nascondo l'immagine attuale e mostro la successiva
+const buttonNext = document.getElementById("next-button");
+
+buttonNext.addEventListener("click", function(){
+    // Rimozione della classe active dall'elemento attuale
+    imgList[activeElementIndex].classList.remove("active");
+    
+    // Incremento di 1 per l'elemento attivo, seleziono quindi il prossimo
+    activeElementIndex = activeElementIndex + 1;
+
+    // Aggiungo la classe active al nuovo elemento attivo
+    imgList[activeElementIndex].classList.add("active");
+})
+
+// Al clic sul pulsante Previous nascondo l'immagine attuale e mostro la precedente
+const buttonPrev = document.getElementById("prev-button");
+
+buttonPrev.addEventListener("click", function(){
+    // Rimozione della classe active dall'elemento attuale
+    imgList[activeElementIndex].classList.remove("active");
+    
+    // Decremento di 1 per l'elemento attivo, seleziono quindi il precedente
+    activeElementIndex = activeElementIndex - 1;
+
+    // Aggiungo la classe active al nuovo elemento attivo
+    imgList[activeElementIndex].classList.add("active");
+})
