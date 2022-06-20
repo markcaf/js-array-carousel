@@ -1,0 +1,10 @@
+.carousel_wrapper .carousel_image_container img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel_wrapper .carousel_image_container img.active{
+    display: block;
+}
