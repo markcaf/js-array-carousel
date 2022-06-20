@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fizz Buzz</title>
+    <title>Carousel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
+
     <main>
-        
+        <section id="carousel_section">
+            <div class="container">
+                <div class="row p-3">
+                    <div class="col-12">
+                        <h1 class="text-center fw-bolder mb-4">Carousel in Javascript</h1>
+                        <div class="carousel_wrapper d-flex flex-column w-75 mx-auto">
+                            <div class="carousel_image_container mb-4">
+                                <img class="active" src="https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg" alt="Carousel 1">
+                                <img class="" src="https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg" alt="Carousel 1">
+                            </div>
+
+                            <div class="carousel_navigation d-flex justify-content-between">
+                                <button class="btn btn-primary btn-lg" id="prev-button">Previous</button>
+                                <button class="btn btn-primary btn-lg" id="next-button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
-
-
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
